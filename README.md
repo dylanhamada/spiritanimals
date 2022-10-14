@@ -9,7 +9,7 @@ Spirit Animals is a front-end project built with HTML and Bootstrap 5, with some
 Sketched out wireframe/layout on paper.
 
 <figure>
-    <img src='https://github.com/dylanhamada/spiritanimals/blob/main/assets/images/layout/layout-1.jpg' width='30%' height='30%' alt='Layout drawing 1' />
+    <img src='https://github.com/dylanhamada/spiritanimals/blob/main/assets/images/design/layout-1.jpg' width='30%' height='30%' alt='Layout drawing 1' />
     <figcaption>First layout drawing. The remaining layout drawings can be viewed <a href='https://github.com/dylanhamada/spiritanimals/tree/main/assets/images/design'>here.</a></figcaption>
 </figure>
 
