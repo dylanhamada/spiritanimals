@@ -6,10 +6,17 @@ Spirit Animals is a front-end project built with HTML and Bootstrap 5, with some
 
 ### Week Two
 
+Completed landing page mockup and most of features page mockup.
+
+<figure>
+    <img src='https://github.com/dylanhamada/spiritanimals/blob/main/assets/images/design/features-1.jpg' width='30%' height='30%' alt='Features Page Mockup' />
+    <figcaption>Landing page mockup on Figma. The actual mood board on Figma can be viewed <a href='https://www.figma.com/file/iSq3bR9djOohTMxuCyd71Y/Spirit-Animals?node-id=9%3A6'>here.</a></figcaption>
+</figure>
+
 Continued work on Figma design mockup.
 
 <figure>
-    <img src='https://github.com/dylanhamada/spiritanimals/blob/main/assets/images/design/landing-3.jpg' width='30%' height='30%' alt='Mood board' />
+    <img src='https://github.com/dylanhamada/spiritanimals/blob/main/assets/images/design/landing-3.jpg' width='30%' height='30%' alt='Landing Page Mockup' />
     <figcaption>Landing page mockup on Figma. The actual mood board on Figma can be viewed <a href='https://www.figma.com/file/iSq3bR9djOohTMxuCyd71Y/Spirit-Animals?node-id=9%3A6'>here.</a></figcaption>
 </figure>
 
