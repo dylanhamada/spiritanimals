@@ -57,6 +57,17 @@ body {
     padding-top: 3.5rem;
 }
 
+h1 {
+    font-weight: 700;
+}
+
+.features {
+    background-size: cover;
+    height: calc(1vw * 35);
+    color: #fff;
+    font-weight: 700;
+}
+
 .nav-brand-text {
     font-weight: 700;
 }
@@ -64,4 +75,52 @@ body {
 .bold-text {
     color: $secondary;
     font-weight: 700;
+}
+
+.reverse-order {
+    order: -1;
+}
+
+#feature-1 {
+    background-image: url(/assets/images/calico-cat.jpg);
+}
+
+#feature-2 {
+    background-image: url(/assets/images/orange-parrot.jpg);
+    background-position: 40%;
+}
+
+#feature-3 {
+    background-image: url(/assets/images/brown-puppy.jpg);
+}
+
+@media (max-width: 767.98px) {
+    #feature-1 {
+        background-position: 0% 15%;
+    }
+
+    #feature-3 {
+        background-position: 0% 20%;
+    }
+}
+
+@media (max-width: 850px) {
+    h1 {
+        @include font-size(1.75rem);
+    }
+
+    h2,
+    h3 {
+        @include font-size(1.25rem);
+    }
+
+    p {
+        @include font-size(0.8rem);
+    }
+}
+
+@media (min-width: 768px) {
+    .reverse-order {
+        order: unset;
+    }
 }
