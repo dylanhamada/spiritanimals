@@ -14,102 +14,147 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
+<!-- Horizontal padding px-4 px-md-6 px-lg-9 px-xl-10 -->
+<!-- Vertical padding -->
+<!-- Flex with column direction and vertical centering -->
+
 <body>
-    <nav>
-        <a href="#">Spirit Animals</a>
-        <ul>
-            <li>Features</li>
-            <li>Blog</li>
-            <li>Testimonials</li>
-        </ul>
-    </nav>
-    <header>
-        <div>
-            <h1>Unconditional Love</h1>
-            <p>Find your animal soulmate with Spirit Animals, a tailor-made pet adoption service that takes all the
-                guesswork out of the matching process.</p>
-        </div>
-        <div>
-            <h2>Video here</h2>
-        </div>
-    </header>
-    <section>
-        <div>
-            <h2>Why You'll Love Our Bespoke Pet Adoption Service</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsum, exercitationem placeat ex
-                similique maxime nulla ipsa. Odit beatae at ullam officia similique earum consequatur natus quod quam
-                id?
-                Dicta ex sunt dolorum eum, suscipit hic similique culpa sit fuga accusantium. Explicabo expedita enim
-                veniam dolor quam? Aut velit sit laborum ex non alias quia iusto. Fugiat, corporis nemo!</p>
-        </div>
-        <div>
-            <figure>
-                <h3>One-on-One Consultation</h3>
-                <a href="#">Learn more</a>
-            </figure>
-            <figure>
-                <h3>Lots of Play Time</h3>
-                <a href="#">Learn more</a>
-            </figure>
-            <figure>
-                <h3>Post-Adoption Support</h3>
-                <a href="#">Learn more</a>
-            </figure>
-        </div>
-    </section>
-    <section>
-        <div>
-            <h2>Image here</h2>
-        </div>
-        <article>
-            <span>The latest from the Spirit Animals blog</span>
-            <h2>Five Reasons Why Dogs Really Are Man's Best Friend</h2>
-            <span>by John Smith on January 1, 2023</span>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque fugiat et distinctio officiis. Dolorem,
-                dolorum est. Deleniti rerum quae odio necessitatibus reprehenderit aliquam temporibus, veniam quidem,
-                vero ut non. Atque illo inventore, obcaecati quod enim nisi est ea, ab dicta quae doloribus, non at
-                beatae aspernatur consequuntur praesentium recusandae iure.</p>
-            <a href="#">Read more</a>
-        </article>
-    </section>
-    <section>
-        <article>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In ea architecto maiores incidunt
-                exercitationem eaque id quis officiis praesentium blanditiis harum omnis quisquam ipsam iste,
-                perspiciatis molestiae consequatur rem autem nam? Autem nostrum fugiat blanditiis voluptatem possimus
-                aliquid, rerum obcaecati.</p>
-            <h4>Image here</h4>
-            <span>Anya Travers</span>
-            <span>Kalamazoo, Michigan</span>
-            <a href="#">More testimonials</a>
-        </article>
-        <div>
-            <h2>Image here</h2>
-        </div>
-    </section>
-    <footer>
-        <div>
-            <h2>Spirit Animals</h2>
-            <ul>
-                <li>About us</li>
-                <li>Privacy policy</li>
-                <li>Terms</li>
-                <li>FAQ</li>
-                <li>Cookie policy</li>
-            </ul>
-        </div>
-        <div>
-            <p>Get in touch</p>
-            <input type="text" placeholder="Your email">
-        </div>
-        <div>
-            <p>Find us on social media</p>
-            <h4>Image here</h4>
-            <h4>Image here</h4>
-            <h4>Image here</h4>
-            <h4>Image here</h4>
-        </div>
-    </footer>
+    <div class="container-fluid">
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-sm fixed-top bg-light shadow-sm">
+            <div class="container-fluid px-4 px-md-6 px-lg-9 px-xl-10">
+                <a class="navbar-brand nav-brand-text" href="#">Spirit Animals</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header -->
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex align-items-center px-4 px-md-6 px-lg-9 px-xl-10 bg-primary">
+                    <div class="py-4 py-sm-5 py-md-0">
+                        <h1>Unconditional Love</h1>
+                        <p>Find your animal soulmate with Spirit Animals, a tailor-made pet adoption service that takes
+                            all
+                            the
+                            guesswork out of the matching process.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <video src="/assets/video/man-with-dog.mp4" autoplay loop muted preload="auto"></video>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Features -->
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h2>Why You'll Love Our <span class="bold-text">Bespoke</span> Pet Adoption <span
+                            class="bold-text">Service</span></h2>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita itaque assumenda quis earum
+                        quae alias quo ad sequi ullam. Facere facilis ipsum autem at nostrum? Explicabo perspiciatis
+                        pariatur iure laborum vitae iste non maxime, repudiandae officia saepe laboriosam. Ullam, unde?
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h3>One-on-One Consultation</h3>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3>Lots of Play Time</h3>
+                    <a href="#">Learn more</a>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3>Post-Adoption Support</h3>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </section>
+        <!-- Blog -->
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="/assets/images/couple-dog.jpg" class="img-fluid" alt="A couple with their dog">
+                </div>
+                <div class="col-12 col-md-6">
+                    <span>The latest from the Spirit Animals blog</span>
+                    <h2>Five Reasons Why Dogs Really Are Man's Best Friend</h2>
+                    <span>by John Smith on January 1, 2023</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus saepe perferendis quasi nobis
+                        temporibus impedit suscipit accusamus modi corrupti similique voluptate tempora facere atque,
+                        velit maiores ea cumque. Impedit consequuntur sapiente praesentium, vero facilis aspernatur
+                        necessitatibus suscipit hic at quasi doloribus ad sunt mollitia officiis! Ratione voluptatibus
+                        beatae assumenda mollitia?</p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus voluptatibus numquam, modi
+                        eius, est magnam nobis saepe voluptas porro rem incidunt expedita ipsa voluptatem veritatis.</p>
+                    <span>Client photo</span>
+                    <span>Anya Travers</span>
+                    <span>Kalamazoo, Michigan</span>
+                    <a href="#">More testimonials</a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img src="/assets/images/black-cat.jpg" class="img-fluid"
+                        alt="A black kitten reaching for its owner's hand">
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h3>SPIRIT ANIMALS</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Cookie policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <p>Get in touch</p>
+                    <input type="text" placeholder="Your email">
+                </div>
+                <div class="col-12 col-md-4">
+                    <p>Find us on social media</p>
+                    <img src="assets/icons/facebook.svg" alt="Facebook icon">
+                    <img src="assets/icons/twitter.svg" alt="Twitter icon">
+                    <img src="assets/icons/instagram.svg" alt="Instagram icon">
+                    <img src="assets/icons/tiktok.svg" alt="TikTok icon">
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
