@@ -10,15 +10,18 @@ $grid-gutter-width: 0;
 $link-decoration: none;
 $navbar-light-active-color: #262626;
 $navbar-light-color: #262626;
-$light: #fff;
+$light: $white;
 $primary: #FDD6F3;
 $secondary: #FD41CD;
+$body-color: #262626;
+$link-color: #262626;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../bootstrap/scss/variables";
 
 // 4. Include any default map overrides here
 
+// Additional spacer units
 $custom-spacers: (
     6: $spacer * 4.5,
     7: $spacer * 6,
@@ -26,6 +29,7 @@ $custom-spacers: (
     9: $spacer * 9,
     10: $spacer * 10.5,
 );
+
 $spacers: map-merge($spacers, $custom-spacers);
 
 // 5. Include remainder of required parts
@@ -57,21 +61,25 @@ body {
     padding-top: 3.5rem;
 }
 
-h1 {
-    font-weight: 700;
+h1,
+a {
+    font-weight: $font-weight-bold;
 }
 
-.features {
+// Have a specific aspect ratio for feature elements on landing page
+.landing-features {
     background-size: cover;
-    height: calc(1vw * 35);
-    color: #fff;
+    height: calc(100vw * .30);
+    color: $white;
     text-align: center;
 
     a {
-        color: #fff;
+        color: $white;
+        font-weight: $font-weight-normal;
     }
 }
 
+// Gradient overlay
 .overlay {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7455357142857143) 0%, rgba(0, 0, 0, 0.2861519607843137) 55%, rgba(0, 0, 0, 0) 100%);
     height: 100%;
@@ -79,14 +87,19 @@ h1 {
 }
 
 .nav-brand-text {
-    font-weight: 700;
+    font-weight: $font-weight-bold;
 }
 
 .bold-text {
     color: $secondary;
-    font-weight: 700;
+    font-weight: $font-weight-bold;
 }
 
+.subtext {
+    font-size: $small-font-size;
+}
+
+// Reverse image order for X-small and Small screen widths
 .reverse-order {
     order: -1;
 }
@@ -104,7 +117,17 @@ h1 {
     background-image: url(/assets/images/brown-puppy.jpg);
 }
 
+#blog-img {
+    background-image: url(/assets/images/couple-dog.jpg);
+    background-size: cover;
+}
+
+// X-small to Medium screen widths
 @media (max-width: 767.98px) {
+    .img-cover {
+        min-height: calc(100vw * .60);
+    }
+
     #feature-1 {
         background-position: 0% 15%;
     }
@@ -114,6 +137,7 @@ h1 {
     }
 }
 
+// Font resizing for X-small to Medium screen widths
 @media (max-width: 850px) {
     h1 {
         @include font-size(1.75rem);
@@ -125,7 +149,8 @@ h1 {
     }
 
     p,
-    a {
+    a,
+    .subtext {
         @include font-size(0.8rem);
     }
 }
