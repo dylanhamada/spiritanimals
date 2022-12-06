@@ -10,7 +10,7 @@ $grid-gutter-width: 0;
 $link-decoration: none;
 $navbar-light-active-color: #262626;
 $navbar-light-color: #262626;
-$light: $white;
+$light: #fff;
 $primary: #FDD6F3;
 $secondary: #FD41CD;
 $body-color: #262626;
@@ -79,6 +79,19 @@ a {
     }
 }
 
+.img-cover {
+    background-size: cover;
+}
+
+.client-photo {
+    background-size: cover;
+    border-radius: 6.25rem;
+    height: 4.69rem;
+    max-height: 4.69rem;
+    width: 4.69rem;
+    max-width: 4.69rem;
+}
+
 // Gradient overlay
 .overlay {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7455357142857143) 0%, rgba(0, 0, 0, 0.2861519607843137) 55%, rgba(0, 0, 0, 0) 100%);
@@ -105,27 +118,35 @@ a {
 }
 
 #feature-1 {
-    background-image: url(/assets/images/calico-cat.jpg);
+    background-image: url(../assets/images/calico-cat.jpg);
 }
 
 #feature-2 {
-    background-image: url(/assets/images/orange-parrot.jpg);
+    background-image: url(../assets/images/orange-parrot.jpg);
     background-position: 40%;
 }
 
 #feature-3 {
-    background-image: url(/assets/images/brown-puppy.jpg);
+    background-image: url(../assets/images/brown-puppy.jpg);
 }
 
 #blog-img {
-    background-image: url(/assets/images/couple-dog.jpg);
-    background-size: cover;
+    background-image: url(../assets/images/couple-dog.jpg);
+}
+
+#client-1 {
+    background-image: url(../assets/images/client-portrait.jpg);
+    background-position: 45%;
+}
+
+#testimonial-img {
+    background-image: url(../assets/images/black-cat.jpg);
 }
 
 // X-small to Medium screen widths
 @media (max-width: 767.98px) {
     .img-cover {
-        min-height: calc(100vw * .60);
+        min-height: calc(100vw * .50);
     }
 
     #feature-1 {
