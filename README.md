@@ -4,6 +4,10 @@ Spirit Animals is a front-end project built with HTML and Bootstrap 5, with some
 
 ## Progress Updates
 
+## Week Five
+
+Finished styling landing page
+
 ### Weeks Two to Four
 
 Worked on layout mockups in Figma.
