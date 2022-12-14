@@ -48,12 +48,12 @@
         </nav>
         <!-- Header -->
         <header class="container-fluid pt-5 pt-md-6 pt-lg-7 pt-xl-9">
-            <div class="row px-4 px-md-6 px-xl-9 ">
-                <div class="col-12 col-md-6 pb-3 pb-md-0">
+            <div class="row">
+                <div class="col-12 col-md-6 px-4 px-md-6 px-xl-9 pb-3 pb-md-0">
                     <h1>Finding Your <span class="bold-text">Next</span></h1>
                     <h1>Forever <span class="bold-text">Friend</span></h1>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 px-4 px-md-6 px-xl-9">
                     <div class="row">
                         <div class="col me-4 profile-photo" id="forever-friend">
                         </div>
@@ -67,9 +67,9 @@
         </header>
         <!-- Features -->
         <section class="container-fluid py-4 py-sm-5">
-            <div class="row p-0 px-md-6 px-xl-9">
+            <div class="row pb-4 pb-sm-5">
                 <div id="feature-cover-1" class="col-12 col-md-6 img-cover"></div>
-                <div class="col-12 col-md-6 p-4 bg-primary">
+                <div class="col-12 col-md-6 d-flex flex-column px-4 px-md-6 px-xl-9 py-4 reverse-order bg-primary">
                     <h2>Personal Consultation</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque maxime itaque quibusdam
                         dolorum quidem modi rem officia, amet ea distinctio sapiente, odit, voluptas non inventore
@@ -78,7 +78,7 @@
                         accusantium vitae impedit ea! Vel, porro eveniet animi, iusto quidem, magni harum suscipit
                         ratione accusamus in aspernatur quasi. Doloremque culpa laboriosam cumque. Laborum reiciendis
                         dolorum numquam.</p>
-                    <ul>
+                    <ul class="features-list">
                         <li>Fully remote sessions</li>
                         <li>Award-winning pet matchmakers</li>
                         <li>Industry-leading pet psychologists</li>
@@ -86,8 +86,8 @@
                     <a href="#" class="text-center">Meet your Spirit Animal</a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
+            <div class="row pb-4 pb-sm-5">
+                <div class="col-12 col-md-6 d-flex flex-column px-4 px-md-6 px-xl-9 py-4 bg-primary">
                     <h2>Unlimited Play Dates</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque maxime itaque quibusdam
                         dolorum quidem modi rem officia, amet ea distinctio sapiente, odit, voluptas non inventore
@@ -96,18 +96,18 @@
                         accusantium vitae impedit ea! Vel, porro eveniet animi, iusto quidem, magni harum suscipit
                         ratione accusamus in aspernatur quasi. Doloremque culpa laboriosam cumque. Laborum reiciendis
                         dolorum numquam.</p>
-                    <ul>
+                    <ul class="features-list">
                         <li>24/7 access</li>
                         <li>State-of-the-art housing complex</li>
                         <li>Fully-stocked pet dining room</li>
                     </ul>
-                    <a href="#">Meet your Spirit Animal</a>
+                    <a href="#" class="text-center">Meet your Spirit Animal</a>
                 </div>
-                <div class="col">Image placeholder</div>
+                <div id="feature-cover-2" class="col-12 col-md-6 img-cover"></div>
             </div>
             <div class="row">
-                <div class="col">Image placeholder</div>
-                <div class="col">
+                <div id="feature-cover-3" class="col-12 col-md-6 img-cover"></div>
+                <div class="col-12 col-md-6 d-flex flex-column px-4 px-md-6 px-xl-9 py-4 reverse-order bg-primary">
                     <h2>Always There For You</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque maxime itaque quibusdam
                         dolorum quidem modi rem officia, amet ea distinctio sapiente, odit, voluptas non inventore
@@ -116,32 +116,33 @@
                         accusantium vitae impedit ea! Vel, porro eveniet animi, iusto quidem, magni harum suscipit
                         ratione accusamus in aspernatur quasi. Doloremque culpa laboriosam cumque. Laborum reiciendis
                         dolorum numquam.</p>
-                    <ul>
+                    <ul class="features-list">
                         <li>Round-the-clock phone support</li>
                         <li>Weekly pet social dates</li>
                         <li>On-demand pet ownership classes</li>
                     </ul>
-                    <a href="#">Meet your Spirit Animal</a>
+                    <a href="#" class="text-center">Meet your Spirit Animal</a>
                 </div>
             </div>
         </section>
         <!-- Questions -->
         <section class="container-fluid">
             <div class="row">
-                <div class="col bg-primary">
+                <div class="col-12 col-md-6 d-flex flex-column px-4 px-md-6 px-xl-9 py-4 bg-primary">
                     <h2>Still Have Questions?</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero architecto sapiente optio placeat
                         perferendis officiis doloremque facilis nisi deleniti modi quibusdam vel, nostrum harum
                         accusamus.</p>
-                    <p>Name</p>
-                    <input type="text" class="form-control" placeholder="Your name">
-                    <p>Email address</p>
-                    <input type="text" class="form-control" placeholder="Your email">
-                    <p>Question</p>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
-                    <a href="#">Submit Question</a>
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control mb-3" name="name" placeholder="Your name">
+                    <label for="email">Email address</label>
+                    <input type="text" class="form-control mb-3" name="email" placeholder="Your email">
+                    <label for="question">Question</label>
+                    <textarea name="" id="" cols="30" rows="10" class="form-control mb-3" name="question"
+                        placeholder="Your question"></textarea>
+                    <a href="#" class="text-center">Submit Question</a>
                 </div>
-                <div class="col">Image placeholder</div>
+                <div id="feature-question" class="d-none d-md-block col-12 col-md-6 img-cover"></div>
             </div>
         </section>
         <!-- Footer -->
@@ -154,11 +155,11 @@
             <div class="row px-4 px-md-6 px-xl-9 pb-4 pb-sm-5 bg-primary">
                 <div class="col-12 col-md-4 pb-4 pb-md-0">
                     <ul class="nav flex-column">
-                        <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Privacy policy</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Terms</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Cookie policy</a></li>
+                        <li class="nav-item"><a class="nav-link footer-text" href="#">About us</a></li>
+                        <li class="nav-item"><a class="nav-link footer-text" href="#">Privacy policy</a></li>
+                        <li class="nav-item"><a class="nav-link footer-text" href="#">Terms</a></li>
+                        <li class="nav-item"><a class="nav-link footer-text" href="#">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link footer-text" href="#">Cookie policy</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-4 pb-4 pb-md-0">

@@ -102,6 +102,10 @@ a {
     width: 100%;
 }
 
+.features-list {
+    list-style-image: url(../assets/icons/checkmark.svg);
+}
+
 .nav-brand-text {
     font-weight: $font-weight-bold;
 }
@@ -172,6 +176,19 @@ a {
     background-position: 70%;
 }
 
+#feature-cover-2 {
+    background-image: url(../assets/images/woman-cats.jpg);
+}
+
+#feature-cover-3 {
+    background-image: url(../assets/images/pet-mouse.jpg);
+}
+
+#feature-question {
+    background-image: url(../assets/images/boy-dog.jpg);
+    background-position: 50%;
+}
+
 // X-small to Medium screen widths
 @media (max-width: 767.98px) {
     .img-cover {
@@ -205,6 +222,8 @@ a {
 
     p,
     a,
+    li,
+    label,
     .subtext {
         @include font-size(0.8rem);
     }
