@@ -1,52 +1,98 @@
-/*
-<div class="row">
-    <div class="col me-4 profile-photo" id="forever-friend">
-    </div>
-    <div class="col d-flex flex-column justify-content-center">
-        <span class="subtext fw-bold">Magoo, 5 years old</span>
-        <span class="subtext">Likes long walks in the rain, chasing bicycles</span>
-    </div>
-</div>
-*/
-
-// Make every element have an id for easier selection
-// Create a row div for each pet and populate it with child elements
-// Row starts with first pet in array
-// After load, setInterval to "slide" every 20 seconds
-// To change, row slides down and fades within less than 1 sec
-// Next row created with transparency, slides down and fades in within less than 1 sec
-
-// Make array of pets with picture, name, and blurb
+const petRows = [];
+// array of pets with picture, name, and blurb
 const pets = [
     {
         name: "Magoo",
         age: 5,
-        blurb: "Likes long walks in the rain, chasing bicycles",
+        description: "Likes long walks in the rain, chasing bicycles",
         image: "../assets/images/black-pug.jpg",
+        offset: [0, 45],
     },
     {
         name: "Isabel",
         age: 2,
-        blurb: "Hates baths but loves long cuddles",
+        description: "Hates baths but loves long cuddles",
         image: "../assets/images/white-cat.jpg",
+        offset: [0, 60],
     },
     {
         name: "Dozer",
         age: 8,
-        blurb: "Enjoys chew toys and goes through more than one a week",
+        description: "Enjoys chew toys and goes through more than one a week",
         image: "../assets/images/zebra-dog.jpg",
+        offset: [0, 5],
     },
     {
         name: "Schumacher",
-        age: 1,
-        blurb: "Most at home in lukewarm waters under a nice lamp",
+        age: 2,
+        description: "Most at home in lukewarm waters under a nice lamp",
         image: "../assets/images/striped-turtle.jpg",
+        offset: [0, 10],
     },
     {
         name: "Atreyu",
         age: 3,
-        blurb: "Favorite songs are the Macarena and Moon River",
+        description: "Favorite songs are the Macarena and Moon River",
         image: "../assets/images/white-cockatoo.jpg",
+        offset: [50, 0],
     },
 ];
 
+// take a pet object and create a row with nested elements
+const makeRow = pet => {
+    // create variables for each element
+    const row = document.createElement("div");
+    const profile = document.createElement("div");
+    const blurb = document.createElement("div");
+    const name = document.createElement("span");
+    const description = document.createElement("span");
+
+    // append text to span elements
+    name.append(`${pet.name}, ${pet.age} years old`);
+    description.append(pet.description);
+
+    // add classes and styling to elements
+    row.classList.add("row");
+    profile.classList.add("col", "me-4", "profile-photo");
+    profile.style.backgroundImage = `url(${pet.image})`;
+    profile.style.backgroundPosition = `${pet.offset[0]}% ${pet.offset[1]}%`;
+    blurb.classList.add("col", "d-flex", "flex-column", "justify-content-center");
+    name.classList.add("subtext", "fw-bold");
+    description.classList.add("subtext");
+
+    // nest elements in their proper place
+    blurb.append(name, description);
+    row.append(profile, blurb);
+
+    return row;
+};
+
+// populate petRows array by calling makeRow for each element in pets array
+for (pet of pets) {
+    petRows.push(makeRow(pet));
+}
+
+// append first element of petRows to #pet-slider div on page load
+const petSlider = document.querySelector("#pet-slider");
+petSlider.append(petRows[0]);
+
+// define child of #pet-slider
+let petSlide = petSlider.children[0];
+
+let slideNum = 0;
+// every 10 seconds, change petSlide
+setInterval(() => {
+    petSlide.remove();
+
+    slideNum++;
+    console.log(slideNum);
+    if (slideNum > 4) slideNum = 0;
+
+    setTimeout(() => {
+        petSlider.append(petRows[slideNum]);
+        petSlide = petSlider.children[0];
+    }, 1000)
+}, 10000)
+
+// "animate" with CSS transitions
+// in mobile screen, screen height adjusts in between slide changes
