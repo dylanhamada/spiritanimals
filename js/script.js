@@ -5,41 +5,31 @@ const pets = [
         name: "Magoo",
         age: 5,
         description: "Likes long walks in the rain, chasing bicycles",
-        image: "../assets/images/black-pug.jpg",
-        offset: [0, 45],
     },
     {
         name: "Isabel",
         age: 2,
         description: "Hates baths but loves long cuddles",
-        image: "../assets/images/white-cat.jpg",
-        offset: [0, 60],
     },
     {
         name: "Dozer",
         age: 8,
         description: "Enjoys chew toys and goes through more than one a week",
-        image: "../assets/images/zebra-dog.jpg",
-        offset: [0, 5],
     },
     {
         name: "Schumacher",
         age: 2,
         description: "Most at home in lukewarm waters under a nice lamp",
-        image: "../assets/images/striped-turtle.jpg",
-        offset: [0, 10],
     },
     {
         name: "Atreyu",
         age: 3,
         description: "Favorite songs are the Macarena and Moon River",
-        image: "../assets/images/white-cockatoo.jpg",
-        offset: [50, 0],
     },
 ];
 
 // take a pet object and create a row with nested elements
-const makeRow = pet => {
+const makeRow = (pet, index) => {
     // create variables for each element
     const row = document.createElement("div");
     const profile = document.createElement("div");
@@ -54,8 +44,7 @@ const makeRow = pet => {
     // add classes and styling to elements
     row.classList.add("row");
     profile.classList.add("col", "me-4", "profile-photo");
-    profile.style.backgroundImage = `url(${pet.image})`;
-    profile.style.backgroundPosition = `${pet.offset[0]}% ${pet.offset[1]}%`;
+    profile.id = `forever-friend-${index + 1}`;
     blurb.classList.add("col", "d-flex", "flex-column", "justify-content-center");
     name.classList.add("subtext", "fw-bold");
     description.classList.add("subtext");
@@ -68,9 +57,9 @@ const makeRow = pet => {
 };
 
 // populate petRows array by calling makeRow for each element in pets array
-for (pet of pets) {
-    petRows.push(makeRow(pet));
-}
+pets.forEach((pet, index) => {
+    petRows.push(makeRow(pet, index));
+})
 
 // append first element of petRows to #pet-slider div on page load
 const petSlider = document.querySelector("#pet-slider");
@@ -85,7 +74,6 @@ setInterval(() => {
     petSlide.remove();
 
     slideNum++;
-    console.log(slideNum);
     if (slideNum > 4) slideNum = 0;
 
     setTimeout(() => {
