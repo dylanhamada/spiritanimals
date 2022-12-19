@@ -27,6 +27,7 @@ const pets = [
         description: "Favorite songs are the Macarena and Moon River",
     },
 ];
+const petSlider = document.querySelector("#pet-slider");
 
 // take a pet object and create a row with nested elements
 const makeRow = (pet, index) => {
@@ -42,7 +43,7 @@ const makeRow = (pet, index) => {
     description.append(pet.description);
 
     // add classes and styling to elements
-    row.classList.add("row");
+    row.classList.add("row", "forever-friend-above");
     profile.classList.add("col", "me-4", "profile-photo");
     profile.id = `forever-friend-${index + 1}`;
     blurb.classList.add("col", "d-flex", "flex-column", "justify-content-center");
@@ -61,26 +62,53 @@ pets.forEach((pet, index) => {
     petRows.push(makeRow(pet, index));
 })
 
-// append first element of petRows to #pet-slider div on page load
-const petSlider = document.querySelector("#pet-slider");
-petSlider.append(petRows[0]);
+let currentSlide = 0;
 
-// define child of #pet-slider
-let petSlide = petSlider.children[0];
+// display initial slide
+const initialSlide = slide => {
+    petSlider.append(slide);
+    slide.style.opacity = 1;
+    slide.style.transform = "translateY(0rem)";
+};
 
-let slideNum = 0;
-// every 10 seconds, change petSlide
+// move next slide into view
+const slideIn = slide => {
+    petSlider.append(slide);
+    new Promise((resolve, reject) => {
+        setTimeout(() => {
+            slide.style.opacity = 1;
+            slide.style.transform = "translateY(0rem)";
+            resolve("Slide added");
+        }, 100);
+    })
+};
+
+// move current slide out of view
+const slideOut = slide => {
+    slide.style.opacity = 0;
+    slide.style.transform = "translateY(5rem)";
+    if (currentSlide === 4) currentSlide = 0;
+    else currentSlide++;
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            slide.remove();
+            resolve("Slide removed");
+        }, 800);
+    });
+};
+
+// unload then laod slides
+const slideLoop = async () => {
+    await slideOut(petSlider.children[0]);
+    await slideIn(petRows[currentSlide]);
+};
+
+initialSlide(petRows[currentSlide]);
+
+// loop slides every 5 seconds
 setInterval(() => {
-    petSlide.remove();
+    slideLoop();
+}, 8000);
 
-    slideNum++;
-    if (slideNum > 4) slideNum = 0;
-
-    setTimeout(() => {
-        petSlider.append(petRows[slideNum]);
-        petSlide = petSlider.children[0];
-    }, 1000)
-}, 10000)
-
-// "animate" with CSS transitions
-// in mobile screen, screen height adjusts in between slide changes
+// clean up by putting everything in one function
+// fix height issue in mobile view

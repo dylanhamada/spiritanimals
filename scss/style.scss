@@ -95,6 +95,12 @@ a {
     max-width: 4.69rem;
 }
 
+.forever-friend-above {
+    opacity: 0;
+    transform: translateY(-5rem);
+    transition: all 0.8s;
+}
+
 // Gradient overlay
 .overlay {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7455357142857143) 0%, rgba(0, 0, 0, 0.2861519607843137) 55%, rgba(0, 0, 0, 0) 100%);
