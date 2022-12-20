@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- Horizontal padding for navbar and sections: px-4 px-md-6 px-xl-9 -->
+<!-- Horizontal padding for child text containers (add start or end): p-4 -->
+<!-- Vertical padding for sections: py-4 py-sm-5 py-md-0 -->
+<!-- Vertical padding for interior of sections (specify top or bottom): py-2 -->
+<!-- Flex with column direction and vertical centering: d-flex align-items-center -->
+
+<body>
+    <div class="container-fluid">
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-sm fixed-top bg-light shadow-sm">
+            <div class="container-fluid px-4 px-md-6 px-xl-9">
+                <a class="navbar-brand nav-brand-text" href="#">SPIRIT ANIMALS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header -->
+        <header class="container-fluid pt-5 pt-md-6 pt-lg-7 pt-xl-9">
+            <div class="row">
+                <div class="col-12 col-md-6 px-4 px-md-6 px-xl-9 pb-3 pb-md-0">
+                    <h1>How Do You Find</h1>
+                    <h1>Your Pet <span class="bold-text">Soulmate?</span></h1>
+                </div>
+                <div class="col-12 col-md-6 px-4 px-md-6 px-xl-9 pb-3 pb-md-0">
+                    <div class="row">
+                        <div id="blog-author" class="col me-4 profile-photo"></div>
+                        <div class="col d-flex flex-column justify-content-center">
+                            <span class="subtext fw-bold">Written by</span>
+                            <span class="subtext">Robert Halpert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col px-4 px-md-6 px-xl-9 mb-3">
+                    <span class="blog-date subtext">March 18, 2022</span>
+                    <span><a href="#" class="subtext blog-tags">Soul searching</a>, <a href="#"
+                            class="subtext blog-tags">Matchmaker</a>, <a href="#" class="subtext blog-tags">Adoption
+                            process</a></span>
+                </div>
+            </div>
+        </header>
+        <!-- Blog Body -->
+
+        <!-- Footer -->
+        <footer class="container-fluid">
+            <div class="row px-4 px-md-6 px-xl-9 mt-4 mt-sm-5 pt-4 pt-sm-5 bg-primary">
+                <div class="col-12">
+                    <h3 class="footer-header bold-text">SPIRIT ANIMALS</h3>
+                </div>
+            </div>
+            <div class="row px-4 px-md-6 px-xl-9 pb-4 pb-sm-5 bg-primary">
+                <div class="col-12 col-md-4 pb-4 pb-md-0">
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link footer-text" href="#">About us</a></li>
+                        <li class="nav-item"><a class="nav-link footer-text" href="#">Privacy policy</a></li>
+                        <li class="nav-item"><a class="nav-link footer-text" href="#">Terms</a></li>
+                        <li class="nav-item"><a class="nav-link footer-text" href="#">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link footer-text" href="#">Cookie policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 pb-4 pb-md-0">
+                    <p class="footer-text">Get in touch</p>
+                    <div class="row">
+                        <div class="col-8 col-sm-7 col-md-9 col-lg-8">
+                            <input class="form-control" type="text" placeholder="Your email">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col">
+                            <p class="footer-text">Find us on social media</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex justify-content-start">
+                            <img class="social-icon" src="./assets/icons/facebook.svg" alt="Facebook icon">
+                            <img class="social-icon" src="./assets/icons/twitter.svg" alt="Twitter icon">
+                            <img class="social-icon" src="./assets/icons/instagram.svg" alt="Instagram icon">
+                            <img class="social-icon" src="./assets/icons/tiktok.svg" alt="TikTok icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+<!-- 
+row.classList.add("row", "forever-friend-initial");
+profile.classList.add("col", "me-4", "profile-photo");
+profile.id = `forever-friend-${index + 1}`;
+blurb.classList.add("col", "d-flex", "flex-column", "justify-content-center");
+name.classList.add("subtext", "fw-bold");
+description.classList.add("subtext"); 
+-->

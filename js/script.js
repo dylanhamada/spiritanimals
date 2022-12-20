@@ -28,9 +28,9 @@ const pets = [
     },
 ];
 
-// format each row and push them into petRows array
+// create slides and push them into petRows array
 const makeSlides = () => {
-    // take a pet object and create a row with nested elements
+    // use elements from pet array to create a row with nested elements
     const makeRow = (pet, index) => {
         // create variables for each element
         const row = document.createElement("div");

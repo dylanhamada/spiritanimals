@@ -69,7 +69,7 @@ a {
     font-weight: $font-weight-bold;
 }
 
-// Have a specific aspect ratio for feature elements on landing page
+// Specific aspect ratio for feature cards on landing page
 .landing-features {
     background-size: cover;
     height: calc(100vw * .30);
@@ -95,6 +95,7 @@ a {
     max-width: 4.69rem;
 }
 
+// Initial styles for pet slider
 .forever-friend-initial {
     opacity: 0;
     transform: translateY(-2rem);
@@ -141,9 +142,19 @@ a {
 }
 
 // Reverse image order for X-small and Small screen widths
-
 .reverse-order {
     order: -1;
+}
+
+.blog-date {
+    border-right: 1px solid $gray-600;
+    display: inline-block;
+    padding: 0.25rem 2rem 0.25rem 0;
+    margin-right: 2rem;
+}
+
+.blog-tags {
+    font-weight: $font-weight-normal;
 }
 
 #feature-1 {
@@ -213,6 +224,12 @@ a {
 #forever-friend-5 {
     background-image: url(../assets/images/white-cockatoo.jpg);
     background-position: 50% 0;
+}
+
+#blog-author {
+    background-image: url(../assets/images/writer-portrait.jpg);
+    background-size: 125%;
+    background-position: 0 25%;
 }
 
 // X-small to Medium screen widths
