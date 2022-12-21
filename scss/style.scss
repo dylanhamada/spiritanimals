@@ -70,7 +70,7 @@ a {
 }
 
 // Specific aspect ratio for feature cards on landing page
-.landing-features {
+.features-card {
     background-size: cover;
     height: calc(100vw * .30);
     color: $white;
@@ -84,6 +84,7 @@ a {
 
 .img-cover {
     background-size: cover;
+    min-height: calc(100vw * .30);
 }
 
 .profile-photo {
@@ -146,13 +147,6 @@ a {
     order: -1;
 }
 
-.blog-date {
-    border-right: 1px solid $gray-600;
-    display: inline-block;
-    padding: 0.25rem 2rem 0.25rem 0;
-    margin-right: 2rem;
-}
-
 .blog-tags {
     font-weight: $font-weight-normal;
 }
@@ -168,6 +162,20 @@ a {
 
 #feature-3 {
     background-image: url(../assets/images/brown-puppy.jpg);
+}
+
+#blog-post-1 {
+    background-image: url(../assets/images/lady-cat.jpg);
+    background-position: 40% 0;
+}
+
+#blog-post-2 {
+    background-image: url(../assets/images/girl-dog.jpg);
+    background-position: 60% 0;
+}
+
+#blog-post-3 {
+    background-image: url(../assets/images/red-fox.jpg);
 }
 
 #blog-img {
@@ -232,10 +240,33 @@ a {
     background-position: 0 25%;
 }
 
+#blog-img-1 {
+    background-image: url(../assets/images/woman-dog-2.jpg);
+    background-position: 0 30%;
+}
+
+#blog-img-2 {
+    background-image: url(../assets/images/kitty-play.jpg);
+}
+
+#blog-img-3 {
+    background-image: url(../assets/images/dog-beach.jpg);
+    background-position: 0 60%;
+}
+
+#blog-img-4 {
+    background-image: url(../assets/images/man-macaque.jpg);
+    background-position: 0 40%;
+}
+
 // X-small to Medium screen widths
 @media (max-width: 767.98px) {
     .img-cover {
         min-height: calc(100vw * .50);
+    }
+
+    .features-card {
+        height: calc(100vw * .40);
     }
 
     .social-icon {
@@ -243,12 +274,16 @@ a {
         height: 1.5rem;
     }
 
-    #feature-1 {
-        background-position: 0% 15%;
+    #feature-1,
+    #feature-3,
+    #feature-2 {
+        background-position: 0% 20%;
     }
 
-    #feature-3 {
-        background-position: 0% 20%;
+    #blog-post-1,
+    #blog-post-2,
+    #blog-post-3 {
+        background-position: 0 40%;
     }
 }
 
@@ -269,6 +304,10 @@ a {
     label,
     .subtext {
         @include font-size(0.8rem);
+    }
+
+    .lead {
+        @include font-size(1rem);
     }
 }
 
