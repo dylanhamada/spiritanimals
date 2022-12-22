@@ -135,6 +135,10 @@ a {
     font-size: $small-font-size;
 }
 
+.subtext-fluid {
+    display: inline;
+}
+
 .social-icon {
     width: 2rem;
     height: 2rem;
@@ -259,6 +263,29 @@ a {
     background-position: 0 40%;
 }
 
+#testimonial-img-1 {
+    background-image: url(../assets/images/pet-turtle.jpg);
+}
+
+#testimonial-img-2 {
+    background-image: url(../assets/images/lady-portrait.jpg);
+    background-position: 0 20%;
+}
+
+#testimonial-img-3 {
+    background-image: url(../assets/images/client-portrait.jpg);
+    background-position: 45%;
+}
+
+#testimonial-img-4 {
+    background-image: url(../assets/images/man-portrait.jpg);
+    background-position: 50%;
+}
+
+#testimonial-img-5 {
+    background-image: url(../assets/images/woman-portrait.jpg);
+}
+
 // X-small to Medium screen widths
 @media (max-width: 767.98px) {
     .img-cover {
@@ -272,6 +299,10 @@ a {
     .social-icon {
         width: 1.5rem;
         height: 1.5rem;
+    }
+
+    .subtext-fluid {
+        display: block;
     }
 
     #feature-1,
@@ -296,6 +327,10 @@ a {
     h2,
     h3 {
         @include font-size(1.25rem);
+    }
+
+    h5 {
+        @include font-size(1.1rem);
     }
 
     p,
