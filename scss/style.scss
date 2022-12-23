@@ -10,6 +10,7 @@ $input-border-radius: 0;
 $grid-gutter-width: 0;
 $nav-link-padding-x: 0;
 $link-decoration: none;
+$link-hover-decoration: underline;
 $navbar-light-active-color: #262626;
 $navbar-light-color: #262626;
 $primary: #FDD6F3;
@@ -131,6 +132,11 @@ a {
     font-size: 1rem;
 }
 
+.footer-links:hover {
+    color: $nav-link-hover-color;
+    text-decoration: underline;
+}
+
 .subtext {
     font-size: $small-font-size;
 }
@@ -144,6 +150,10 @@ a {
     height: 2rem;
     margin-right: 2rem;
     filter: invert(46%) sepia(70%) saturate(4329%) hue-rotate(290deg) brightness(100%) contrast(99%);
+}
+
+.social-icon:hover {
+    filter: invert(80%) sepia(18%) saturate(7152%) hue-rotate(281deg) brightness(99%) contrast(105%);
 }
 
 // Reverse image order for X-small and Small screen widths
@@ -265,6 +275,7 @@ a {
 
 #testimonial-img-1 {
     background-image: url(../assets/images/pet-turtle.jpg);
+    background-position: 0 30%;
 }
 
 #testimonial-img-2 {
