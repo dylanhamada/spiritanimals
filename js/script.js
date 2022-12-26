@@ -70,7 +70,7 @@ const slideShow = () => {
     let currentSlide = 0;
     let nextSlide = 1;
 
-    // display initial slide
+    // display initial slide on page load
     const initialSlide = slide => {
         petSlider.append(slide);
         slide.style.opacity = 1;

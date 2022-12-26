@@ -92,9 +92,7 @@ a {
     background-size: cover;
     border-radius: 6.25rem;
     height: 4.69rem;
-    max-height: 4.69rem;
     width: 4.69rem;
-    max-width: 4.69rem;
 }
 
 // Initial styles for pet slider
@@ -116,11 +114,6 @@ a {
 }
 
 .nav-brand-text {
-    font-weight: $font-weight-bold;
-}
-
-.bold-text {
-    color: $secondary;
     font-weight: $font-weight-bold;
 }
 
