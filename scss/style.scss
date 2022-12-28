@@ -61,6 +61,10 @@ $spacers: map-merge($spacers, $custom-spacers);
 
 // 8. Add additional custom code here
 
+// IMPORTANT: The following SASS is divided by specificity and function
+
+// ELEMENT SELECTORS
+
 body {
     padding-top: 3.5rem;
 }
@@ -70,39 +74,21 @@ a {
     font-weight: $font-weight-bold;
 }
 
-// Specific aspect ratio for feature cards on landing page
-.features-card {
-    background-size: cover;
-    height: calc(100vw * .30);
-    color: $white;
-    text-align: center;
+// HEADER STYLES
 
-    a {
-        color: $white;
-        font-weight: $font-weight-normal;
-    }
+.nav-brand-text {
+    font-weight: $font-weight-bold;
 }
 
-.img-cover {
-    background-size: cover;
-    min-height: calc(100vw * .30);
-}
-
-.profile-photo {
-    background-size: cover;
-    border-radius: 6.25rem;
-    height: 4.69rem;
-    width: 4.69rem;
-}
-
-// Initial styles for pet slider
+// FEATURES PAGE STYLES
+// Initial styles for pet slider on features page
 .forever-friend-initial {
     opacity: 0;
     transform: translateY(-2rem);
     transition: all 0.8s;
 }
 
-// Gradient overlay
+// Gradient overlay for features cards
 .overlay {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7455357142857143) 0%, rgba(0, 0, 0, 0.2861519607843137) 55%, rgba(0, 0, 0, 0) 100%);
     height: 100%;
@@ -113,10 +99,14 @@ a {
     list-style-image: url(../assets/icons/checkmark.svg);
 }
 
-.nav-brand-text {
-    font-weight: $font-weight-bold;
+// BLOG PAGE STYLES
+
+.blog-tags {
+    font-weight: $font-weight-normal;
 }
 
+// FOOTER STYLES
+// Blog title in footer section
 .footer-header {
     font-family: $font-family-sans-serif;
 }
@@ -130,14 +120,6 @@ a {
     text-decoration: underline;
 }
 
-.subtext {
-    font-size: $small-font-size;
-}
-
-.subtext-fluid {
-    display: inline;
-}
-
 .social-icon {
     width: 2rem;
     height: 2rem;
@@ -149,14 +131,53 @@ a {
     filter: invert(80%) sepia(18%) saturate(7152%) hue-rotate(281deg) brightness(99%) contrast(105%);
 }
 
-// Reverse image order for X-small and Small screen widths
+// PAGE STRUCTURE STYLES
+// Reverse element order for X-small and Small screen widths
 .reverse-order {
     order: -1;
 }
 
-.blog-tags {
-    font-weight: $font-weight-normal;
+// IMAGE STYLES
+// Positioning and dimension rules for images
+.img-cover {
+    background-size: cover;
+    min-height: calc(100vw * .30);
 }
+
+// Aspect ratio for feature cards on landing and blog pages
+.features-card {
+    background-size: cover;
+    height: calc(100vw * .30);
+    color: $white;
+    text-align: center;
+
+    a {
+        color: $white;
+        font-weight: $font-weight-normal;
+    }
+}
+
+.profile-photo {
+    background-size: cover;
+    border-radius: 6.25rem;
+    max-height: 4.69rem;
+    height: 4.69rem;
+    max-width: 4.69rem;
+    width: 4.69rem;
+}
+
+// TEXT STYLES
+// Smaller font size for dates, captions, and subtitles
+.subtext {
+    font-size: $small-font-size;
+}
+
+// Default display value for large screen sizes
+.subtext-fluid {
+    display: inline;
+}
+
+// BACKGROUND IMAGE STYLES
 
 #feature-1 {
     background-image: url(../assets/images/calico-cat.jpg);
@@ -350,6 +371,7 @@ a {
     }
 }
 
+// Reset for .reverse-order class at large screen sizes
 @media (min-width: 768px) {
     .reverse-order {
         order: unset;
