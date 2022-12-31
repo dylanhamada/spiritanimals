@@ -113,7 +113,7 @@ const slideShow = () => {
     // unload then laod slides
     const slideLoop = async () => {
         await slideOut(petSlider.children[0]);
-        slideIn(petRows.slice(currentSlide, nextSlide)[0]);
+        await slideIn(petRows.slice(currentSlide, nextSlide)[0]);
     };
 
     initialSlide(petRows.slice(0, 1)[0]);
